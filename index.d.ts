@@ -215,16 +215,6 @@ declare module "replicate" {
       ): Promise<Deployment>;
     };
 
-    files: {
-      create: (
-        file: File | Blob,
-        metadata?: Record<string, string | number | boolean | null>
-      ) => Promise<FileObject>;
-      list: () => Promise<FileObject>;
-      get: (file_id: string) => Promise<FileObject>;
-      delete: (file_id: string) => Promise<FileObject>;
-    };
-
     hardware: {
       list(): Promise<Hardware[]>;
     };
